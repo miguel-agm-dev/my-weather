@@ -1,0 +1,15 @@
+import axios from 'axios';
+
+// Function to get the weather
+const getWeather = async (city) => {
+  const apiKey = 'TU_CLAVE_API'; // Aquí va tu clave de la API
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},es&appid=${apiKey}&units=metric&lang=es`;
+
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener el tiempo', error);
+    return null;
+  }
+};
