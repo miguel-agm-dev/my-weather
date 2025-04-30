@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getWeather } from './weatherApi';
+import { getWeather } from './../request';
 
 const SearchBar = ({ addFavorite, setWeatherData }) => {
   const [city, setCity] = useState('');
