@@ -5,7 +5,8 @@ import SearchBar from './components/SearchBar';
 import './App.css';
 
 const App = () => {
-  const [weatherData, setWeatherData] = useState([]);
+  const [weatherData, setWeatherData] = useState(null);
+
   const [favorites, setFavorites] = useState(() => {
     
     // Load saved locations from localStorage when loading the app
@@ -31,18 +32,24 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>My Weather</h1>
-      <SearchBar addFavorite={addFavorite} setWeatherData={setWeatherData} />
+    <div className='container'>
+      <div>
+        <h1>My Weather</h1>
+      </div>
+      <div>
+        <SearchBar addFavorite={addFavorite} setWeatherData={setWeatherData} />
+      </div>
       <div>
         {weatherData && <WeatherCard data={weatherData} />}
       </div>
       <div>
-        <h2>Localidades Favoritas</h2>
+        <h2 className='saved-sites'>Lugares Guardados</h2>
         {favorites.map((city) => (
           <div key={city}>
             <span>{city}</span>
-            <button onClick={() => removeFavorite(city)}>Eliminar</button>
+            <button onClick={() => removeFavorite(city)}>
+              <img src='message-square-minus-solid-24.png' alt='Delete' />
+            </button>
           </div>
         ))}
       </div>
