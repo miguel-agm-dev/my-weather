@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import WeatherCard from './components/WeatherCard';
 import SearchBar from './components/SearchBar';
 
+import './App.css';
+
 const App = () => {
   const [weatherData, setWeatherData] = useState([]);
   const [favorites, setFavorites] = useState(() => {

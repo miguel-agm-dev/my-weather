@@ -1,0 +1,12 @@
+
+h1, h2, p{
+    color: blanchedalmond;
+}
+
+button{
+    padding: .5%;
+    color: rgb(15, 17, 46);
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    margin: 0 5px;
+}
