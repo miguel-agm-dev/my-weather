@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { getWeather } from './weatherApi';
 
 const SearchBar = ({ addFavorite, setWeatherData }) => {
