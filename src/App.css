@@ -1,12 +1,74 @@
-
-h1, h2, p{
-    color: blanchedalmond;
+div .container{
+    width: 70vh;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border: .1px solid blanchedalmond;
+    border-radius: 2%;
+    box-shadow: 0 4px 10px rgba(217, 219, 191, 0.651);
+    padding: 30px;
 }
 
-button{
-    padding: .5%;
-    color: rgb(15, 17, 46);
-    background-color: blanchedalmond;
+h1{
+    font-size: 44px;
+}
+
+h1, .saved-sites, span{
+    color: blanchedalmond;
+}
+input{
+    width: 30vh;
+    padding: 3%;
+    border: none;
     border-radius: 10px;
-    margin: 0 5px;
+}
+
+span{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.title-fav{
+    justify-items: center;
+}
+
+.container-fav, .container-search{
+    padding: 10px;
+    width:50vh;
+    margin: 40px 10px 40px 10px;
+}
+
+.container-sites{
+    justify-items: center;
+    padding: 10px;
+    width:30%;
+    margin: 40px 10px 40px 10px;
+    color: blanchedalmond;
+    background-color: rgb(18, 23, 36);
+    border-radius: 10px;
+    border: .1px solid blanchedalmond;
+    box-shadow: 0 4px 10px rgba(217, 219, 191, 0.651);
+}
+
+.container button {
+    height: 40px;
+    padding: 10px;
+    background-color: rgb(18, 23, 36);
+    border-radius: 10px;
+    border: 0.1px solid blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.container button img {
+    width: 20px;
+    height: 20px;
+}
+
+.container button:hover {
+    background-color: rgb(240, 152, 20);
+    cursor: pointer;
+    transition: all 0.5s ease;
 }

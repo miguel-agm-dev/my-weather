@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { getWeather } from './../request';
 
+import './../SearchBar.css';
+
 const SearchBar = ({ addFavorite, setWeatherData }) => {
   const [city, setCity] = useState('');
 
@@ -20,8 +22,8 @@ const SearchBar = ({ addFavorite, setWeatherData }) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className='browser'>
+      <div className='input-container'>
         <input
           type="text"
           placeholder="Buscar localidad"
@@ -29,14 +31,16 @@ const SearchBar = ({ addFavorite, setWeatherData }) => {
           onChange={(e) => setCity(e.target.value)}
         />
       </div>
-      <div>
-        <button onClick={handleSearch}>
-          <img src='search-solid-24.png' alt='Search' />
-        </button>
-        <button onClick={() => addFavorite(city)}>
-        <img src='star-solid-24.png' alt='Favorite' />
-        </button>
-      </div>
+        <div className='button-search'>
+          <button onClick={handleSearch}>
+            <img src='search-solid-24.png' alt='Search' />
+          </button>
+        </div>
+        <div className='button-fav'>
+          <button onClick={() => addFavorite(city)}>
+          <img src='star-solid-24.png' alt='Favorite' />
+          </button>
+        </div>
     </div>
   );
 };

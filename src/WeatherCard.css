@@ -1,0 +1,19 @@
+div .container-card{
+    justify-items: center;
+    padding: 10px;
+    width:50vh;
+    margin: 40px 10px 40px 10px;
+    color: blanchedalmond;
+    background-color: rgb(18, 23, 36);
+    border-radius: 10px;
+    border: .1px solid blanchedalmond;
+    box-shadow: 0 4px 10px rgba(217, 219, 191, 0.651);
+}
+
+.time-icon{
+    width:100px;
+}
+
+.location{
+    font-size: large;
+}

@@ -1,0 +1,49 @@
+.browser {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .input-container {
+    width: 70%;
+  }
+  
+  .button-search,
+  .button-fav {
+    justify-items: end;
+    width: 12%;
+  }
+  
+  
+  .browser input {
+    height: 40px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .browser button {
+    height: 40px;
+    padding: 10px;
+    background-color: rgb(18, 23, 36);
+    border-radius: 10px;
+    border: 0.1px solid blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .browser button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .browser button:hover {
+    background-color: rgb(240, 152, 20);
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  

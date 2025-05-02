@@ -23,7 +23,7 @@ const App = () => {
     if (favorites.length < 3) {
       setFavorites([...favorites, city]);
     } else {
-      alert('Solo se permite guardar 3 localidades.');
+      alert('Solo se permite guardar 3 lugares.');
     }
   };
 
@@ -34,24 +34,34 @@ const App = () => {
   return (
     <div className='container'>
       <div>
-        <h1>My Weather</h1>
+        <h1>My Weather App</h1>
       </div>
-      <div>
+      <div className='container-search'>
         <SearchBar addFavorite={addFavorite} setWeatherData={setWeatherData} />
       </div>
       <div>
         {weatherData && <WeatherCard data={weatherData} />}
       </div>
-      <div>
-        <h2 className='saved-sites'>Lugares Guardados</h2>
-        {favorites.map((city) => (
-          <div key={city}>
-            <span>{city}</span>
-            <button onClick={() => removeFavorite(city)}>
-              <img src='message-square-minus-solid-24.png' alt='Delete' />
-            </button>
-          </div>
-        ))}
+      <div className='container-fav'>
+        <div className='title-fav'>
+          <h2 className='saved-sites'>Lugares Guardados</h2>
+        </div>
+        <div className='container-sites'>
+          {favorites.length === 0 ? (
+            <p className='saved-sites'>No se ha guardado ningún lugar</p>
+            ) : (
+              favorites.map((city) => (
+                <div key={city}>
+                  <span>{city}</span>
+                  <div className='button-delete'>
+                    <button onClick={() => removeFavorite(city)}>
+                      <img src='message-square-minus-solid-24.png' alt='Delete' />
+                    </button>
+                  </div>
+                </div>
+              ))
+          )}
+        </div>
       </div>
     </div>
   );
